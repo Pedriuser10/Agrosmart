@@ -9,7 +9,6 @@
 </section>
 
 <section class="cards">
-
     <div class="card">
         <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80" alt="Riego inteligente">
         <div class="card-body">
@@ -18,7 +17,6 @@
             <span class="tag">IoT · ESP32</span>
         </div>
     </div>
-
     <div class="card">
         <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=600&q=80" alt="Monitoreo remoto">
         <div class="card-body">
@@ -27,7 +25,6 @@
             <span class="tag">SMS · Telegram</span>
         </div>
     </div>
-
     <div class="card">
         <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&q=80" alt="Alimentación solar">
         <div class="card-body">
@@ -36,7 +33,6 @@
             <span class="tag">Solar · Offline</span>
         </div>
     </div>
-
     <div class="card">
         <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=600&q=80" alt="Capacitación">
         <div class="card-body">
@@ -45,7 +41,6 @@
             <span class="tag">Talleres · Soporte</span>
         </div>
     </div>
-
 </section>
 
 <section class="como-funciona">
@@ -53,9 +48,7 @@
         <h1>¿Cómo funciona?</h1>
         <p>El sistema AgroSmart opera con un flujo continuo desde el sensor hasta tu celular</p>
     </div>
-
     <div class="flujo-imgs">
-
         <div class="flujo-item">
             <img src="{% static 'img/placa.png' %}" alt="Placa ESP32">
             <div class="flujo-caption">
@@ -63,7 +56,6 @@
                 <p>El microcontrolador ESP32 recibe los datos de los sensores de humedad y temperatura, procesa la información y decide cuándo activar o cortar el riego automáticamente. Opera en tres modos: Automático, Manual y Offline.</p>
             </div>
         </div>
-
         <div class="flujo-item flujo-reverse">
             <img src="{% static 'img/Imagen pegada.png' %}" alt="Diagrama de flujo del sistema">
             <div class="flujo-caption">
@@ -71,7 +63,6 @@
                 <p>Los sensores capturan datos en terreno → el ESP32 procesa → el gateway transmite a la nube → el dashboard muestra el estado → las electroválvulas ejecutan el riego. Todo automático, sin intervención manual del agricultor.</p>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -81,21 +72,43 @@
         <p>El sistema se adapta a cualquier condición del terreno</p>
     </div>
     <div class="modos-grid">
+
         <div class="modo-card">
-            <span class="modo-icon">⚙️</span>
+            <span class="modo-icon">
+                <!-- Engranaje / Automático -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                </svg>
+            </span>
             <h3>Automático</h3>
             <p>El sistema activa el riego al detectar umbrales críticos de humedad. Sin intervención del usuario.</p>
         </div>
+
         <div class="modo-card">
-            <span class="modo-icon">📱</span>
+            <span class="modo-icon">
+                <!-- Celular / Manual -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                    <line x1="12" y1="18" x2="12.01" y2="18"/>
+                </svg>
+            </span>
             <h3>Manual</h3>
             <p>El agricultor controla las válvulas de forma remota desde su celular en cualquier momento.</p>
         </div>
+
         <div class="modo-card">
-            <span class="modo-icon">📡</span>
+            <span class="modo-icon">
+                <!-- Señal / Offline -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="2"/>
+                    <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/>
+                </svg>
+            </span>
             <h3>Offline</h3>
             <p>Ante pérdida de señal, el sistema ejecuta rutinas de riego seguras preprogramadas localmente.</p>
         </div>
+
     </div>
 </section>
 
