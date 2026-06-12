@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Servicios — AgroSmart{% endblock %}
+{% block content %}
+
+<section class="page-header">
+    <h1>Nuestros Servicios</h1>
+    <p>Soluciones diseñadas para el agricultor familiar de La Araucanía</p>
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80" alt="Riego inteligente">
+        <div class="card-body">
+            <h2>Riego inteligente por zonas</h2>
+            <p>Sensores de humedad en suelo activan y cortan el riego automáticamente según la necesidad real de cada zona del predio.</p>
+            <span class="tag">IoT · ESP32</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=600&q=80" alt="Monitoreo remoto">
+        <div class="card-body">
+            <h2>Monitoreo remoto</h2>
+            <p>Alertas SMS y bot de Telegram con datos de humedad, temperatura y recomendaciones en tiempo real al celular del agricultor.</p>
+            <span class="tag">SMS · Telegram</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&q=80" alt="Alimentación solar">
+        <div class="card-body">
+            <h2>Alimentación solar autónoma</h2>
+            <p>Kit de panel solar con batería de respaldo para operación autónoma. Funciona sin red eléctrica y con modo offline ante caída de señal.</p>
+            <span class="tag">Solar · Offline</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=600&q=80" alt="Capacitación">
+        <div class="card-body">
+            <h2>Capacitación en terreno</h2>
+            <p>Talleres prácticos y manuales simplificados directamente en el predio, sin tecnicismos. Soporte por WhatsApp incluido.</p>
+            <span class="tag">Talleres · Soporte</span>
+        </div>
+    </div>
+
+</section>
+
+<section class="como-funciona">
+    <div class="page-header">
+        <h1>¿Cómo funciona?</h1>
+        <p>El sistema AgroSmart opera con un flujo continuo desde el sensor hasta tu celular</p>
+    </div>
+
+    <div class="flujo-imgs">
+
+        <div class="flujo-item">
+            <img src="{% static 'img/placa.png' %}" alt="Placa ESP32">
+            <div class="flujo-caption">
+                <h3>Placa ESP32 — Nodo central</h3>
+                <p>El microcontrolador ESP32 recibe los datos de los sensores de humedad y temperatura, procesa la información y decide cuándo activar o cortar el riego automáticamente. Opera en tres modos: Automático, Manual y Offline.</p>
+            </div>
+        </div>
+
+        <div class="flujo-item flujo-reverse">
+            <img src="{% static 'img/Imagen pegada.png' %}" alt="Diagrama de flujo del sistema">
+            <div class="flujo-caption">
+                <h3>Flujo completo del sistema</h3>
+                <p>Los sensores capturan datos en terreno → el ESP32 procesa → el gateway transmite a la nube → el dashboard muestra el estado → las electroválvulas ejecutan el riego. Todo automático, sin intervención manual del agricultor.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="modos">
+    <div class="page-header">
+        <h1>Modos de operación</h1>
+        <p>El sistema se adapta a cualquier condición del terreno</p>
+    </div>
+    <div class="modos-grid">
+        <div class="modo-card">
+            <span class="modo-icon">⚙️</span>
+            <h3>Automático</h3>
+            <p>El sistema activa el riego al detectar umbrales críticos de humedad. Sin intervención del usuario.</p>
+        </div>
+        <div class="modo-card">
+            <span class="modo-icon">📱</span>
+            <h3>Manual</h3>
+            <p>El agricultor controla las válvulas de forma remota desde su celular en cualquier momento.</p>
+        </div>
+        <div class="modo-card">
+            <span class="modo-icon">📡</span>
+            <h3>Offline</h3>
+            <p>Ante pérdida de señal, el sistema ejecuta rutinas de riego seguras preprogramadas localmente.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>¿Trabajas con INDAP o CORFO?</h2>
+    <p>Podemos ayudarte a postular a subsidios para financiar la instalación del sistema.</p>
+    <a href="/contacto/" class="btn">Contáctanos</a>
+</section>
+
+{% endblock %}
